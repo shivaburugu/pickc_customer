@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Pick-C</string>
+    <string name="api_key">AIzaSyBt7Y0WDy9nka0JrV_gZkLIt-zTRfbf_ZE</string>
+
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_activity_title">Book Pick-C Truck</string>
+    <string name="terms_conditions">I AGREE </string>
+    <string name="terms_conditions_decline">DECLINE </string>
+    <string-array name="selectAction">
+        <item>Resend OTP</item>
+        <item>Enter OTP Manually</item>
+    </string-array>
+    <string name="cancel">Cancel</string>
+    <string name="title_activity_status">CCAvenueMobile</string>
+    <!--<string name="rateCardCautions">-->
+    <!--<![CDATA[<p><b>*</b> Toll / Parking / Other charges shall be paid by the customer </p>-->
+     <!--<p><b>*</b> Night time charges is applicable from 10PM to 5AM </p>-->
+    <!--]]>-->
+    <!--</string>-->
+    <!--<string name="rateCardCautions"><![CDATA[<p><b>*</b> Toll / Parking / Other charges shall be paid by the customer </p>-->
+     <!--<p><b>*</b> Night time charges is applicable from 10PM to 5AM </p>]]></string>-->
+    <string name="html_terms_conditions_text_view">
+
+    </string>
+    <string name="nointernet">Please connect to network</string>
+
+</resources>

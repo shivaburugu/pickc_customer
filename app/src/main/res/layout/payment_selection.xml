@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/appThemeBgColorDark"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="10dp"
+        android:background="@color/appThemeBgColorDark"
+        >
+    <com.prts.pickccustomer.constants.PickCCustomTextVIew
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:id="@+id/b_number"
+        android:gravity="center"
+        android:background="@color/appThemeYellow"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:elevation="10dp"
+        android:text="Booking Number"
+        />
+    <com.prts.pickccustomer.constants.PickCCustomTextVIew
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:gravity="center"
+        android:id="@+id/amount"
+        android:background="@color/appThemeYellow"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:elevation="10dp"
+        android:textSize="26sp"
+        android:text="Amount"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/appThemeBgColorDark"
+        android:elevation="10dp"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                android:id="@+id/cash_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="0.1dp"
+                android:layout_marginLeft="0.1dp"
+                android:layout_marginRight="0.1dp"
+                android:layout_marginTop="0.1dp"
+                android:background="@drawable/mybutton"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="CASH PAYMENT"
+                android:textColor="@color/appThemeYellow"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/cash_payments"
+                android:layout_alignTop="@+id/cash_button"
+                android:layout_alignLeft="@+id/cash_button"
+                android:layout_alignStart="@+id/cash_button"
+                android:layout_alignBottom="@+id/cash_button" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:id="@+id/online_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="0.1dp"
+            android:layout_marginLeft="0.1dp"
+            android:layout_marginRight="0.1dp"
+            android:padding="20dp"
+            android:layout_marginTop="0.1dp"
+            android:background="@drawable/mybutton"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="ONLINE PAYMENT"
+            android:textColor="@color/appThemeYellow"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="40dp"
+                android:elevation="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/online_payments"
+                android:layout_alignBottom="@+id/online_button"
+                android:layout_alignTop="@+id/online_button" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

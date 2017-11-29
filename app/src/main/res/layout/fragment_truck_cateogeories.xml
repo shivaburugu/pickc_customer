@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/truck_categeories_top_linearLayout"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loading"
+                android:textSize="10dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/loadingTV_2"
+                android:layout_gravity="center"
+                android:textColor="#000"
+                android:paddingTop="2dp"/>
+             <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:id="@+id/loadingImageView"
+                android:layout_below="@+id/loadingTV_2"
+                android:layout_above="@+id/unlodingTV_2"
+                android:src="@drawable/none_selected_open"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dp"
+                android:textSize="10dp"
+                android:textColor="#000"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/unlodingTV_2"
+                android:text="Un loading"
+                android:layout_gravity="center"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#000"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"/>
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <GridLayout
+                    android:id="@+id/gridLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:rowCount="1"></GridLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/appThemeYellow"
+        android:layout_marginBottom="0.1dp"
+        android:id="@+id/confirm_booking_rateCardLayout"
+        android:visibility="visible"
+        android:gravity="center">
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Rate Card"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginRight="0.1dp"
+            android:textColor="@color/appThemeYellow"
+            android:background="@color/appThemeBgColorLight"
+            android:id="@+id/rateCardTV_confirmBookingLayout"
+            />
+
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:id="@+id/rideEstimateTV_confirmBookingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:background="@color/appThemeBgColorLight"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Trip Estimate"
+            android:textColor="@color/appThemeYellow"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

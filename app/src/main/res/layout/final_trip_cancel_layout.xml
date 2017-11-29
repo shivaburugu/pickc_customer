@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+       >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Cancel Booking"
+            android:padding="10dp"
+            android:textColor="@color/appThemeYellow"
+            android:textSize="20sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10"
+        android:visibility="invisible"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+
+        android:orientation="vertical"
+      >
+
+        <ListView
+            android:id="@+id/listViewCancelDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:id="@+id/donotCancelTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="0.1dp"
+            android:layout_weight="1"
+            android:background="@color/appThemeBgColorLight"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Don\'t Cancel"
+            android:textColor="@color/appThemeYellow"
+            android:textSize="24sp"
+            android:textStyle="normal" />
+
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:id="@+id/cancelBookingTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="0.1dp"
+            android:layout_weight="1"
+            android:background="@color/appThemeBgColorLight"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Cancel Booking"
+            android:textColor="@color/appThemeYellow"
+            android:textSize="24sp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryDark"
+       >
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Please tell us why you want to cancel"
+            android:textColor="@color/appThemeYellow"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+        </LinearLayout>
+</ScrollView>
+</LinearLayout>

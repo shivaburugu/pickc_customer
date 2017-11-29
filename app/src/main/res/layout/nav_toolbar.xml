@@ -1,0 +1,19 @@
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/my_awesome_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/appThemeBgColorLight"
+    android:elevation="10dp"
+    android:minHeight="?attr/actionBarSize"
+    android:theme="@style/GalaxyZooThemeToolbarDarkOverflow">
+
+    <TextView
+        android:id="@+id/titletool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:paddingRight="50dp"
+        android:textColor="@color/appThemeYellow" />
+</android.support.v7.widget.Toolbar>

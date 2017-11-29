@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/appThemeBgColorDark"
+    android:layout_height="match_parent">
+
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:gravity="center"
+            android:background="@color/appThemeYellow"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:id="@+id/booking_num"
+            android:text="Booking Number"
+            />
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:gravity="center"
+            android:background="@color/appThemeYellow"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:id="@+id/amount_pay"
+            android:text="Amount"
+            />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="10dp"
+        android:background="@color/appThemeBgColorDark"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:id="@+id/pay_button"
+            android:layout_width="match_parent"
+            android:padding="20dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="0.1dp"
+            android:layout_marginLeft="0.1dp"
+            android:layout_marginRight="0.1dp"
+            android:layout_marginTop="0.1dp"
+            android:background="@drawable/mybutton"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="PAY NOW "
+            android:textColor="@color/appThemeYellow"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+            <!--<ImageView-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:elevation="10dp"-->
+                <!--android:layout_marginLeft="30dp"-->
+
+                <!--android:src="@drawable/cash_payments"-->
+                <!--android:layout_alignLeft="@+id/cash_button"-->
+                <!--android:layout_alignStart="@+id/cash_button"-->
+                <!--android:layout_alignBottom="@+id/pay_button"-->
+                <!--android:layout_alignTop="@+id/pay_button" />-->
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

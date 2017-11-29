@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ededed</color>
+    <color name="colorPrimaryDark">#181300</color>
+    <color name="colorAccent">#4b4900</color>
+
+
+    <color name="colorConfirmedStatus">#c9bb00</color>
+    <color name="colorCancelledStatus">#ff5d51</color>
+    <color name="colorCompletedStatus">#80ff7c</color>
+    <color name="colorPendingStatus">#7085ff</color>
+
+    <color name="colorAppBlue">#0d3e69</color>
+    <color name="colorAppWhite">#f4f4f4</color>
+
+
+    <color name="appThemeBgColorDark">#ededed</color>
+    <color name="appThemeBgColorLight">@color/colorPrimaryDark</color>
+    <color name="appThemeTextColorLight">@color/colorPrimaryDark</color>
+    <color name="appThemeTextColorDark">#ededed</color>
+    <color name="appThemeTextHintColor">#afafaf</color>
+    <color name="appThemeTextHighLightColor">#4d4d4d</color>
+    <color name="appThemeTextErrorColor">#f4f4f4</color>
+
+    <color name="appThemeYellow">#f8f206</color>
+
+    <color name="background_color">#45999999</color>
+
+
+</resources>

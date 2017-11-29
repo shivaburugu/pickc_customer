@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:background="@color/appThemeBgColorDark"
+    tools:context=".ui.history.BookingHistoryActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:id="@+id/bookingHistoryLayout"
+        android:visibility="gone"
+        android:orientation="vertical">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:src="@drawable/historybook"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/appThemeBgColorLight"
+        android:text="No bookings Yet"/>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:id="@+id/no_bookings"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+
+        android:text="You have not done any booking yet. \n  Book your trip today"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/appThemeYellow"
+        android:id="@+id/line"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView"
+        android:layout_below="@+id/line"
+        android:layout_above="@+id/line2"
+        android:padding="0dp"></android.support.v7.widget.RecyclerView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/appThemeYellow"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/line2"/>
+</RelativeLayout>

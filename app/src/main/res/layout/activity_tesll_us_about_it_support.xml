@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appThemeBgColorDark"
+    tools:context="com.prts.pickccustomer.support.TesllUsAboutItSupportActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <FrameLayout
+            android:id="@+id/frame_container_tell_us_activity"
+            android:name="com.prts.pickccustomer.support.WriteToUsSupportFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="5dp"
+            android:layout_marginBottom="20dp"
+            android:minHeight="50dp"/>
+        <fragment
+            android:id="@+id/write_to_us_fragment"
+            android:name="com.prts.pickccustomer.support.WriteToUsSupportFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <fragment
+            android:id="@+id/call_us_fragment"
+            android:name="com.prts.pickccustomer.support.CallUsSupportFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

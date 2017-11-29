@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/appThemeBgColorDark">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLinear"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:id="@+id/splash_text_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@+id/splash_iv"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            android:layout_alignStart="@+id/splash_iv"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/appThemeTextColorLight"
+            android:textSize="46sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/splash_iv"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="120dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/pick_c" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_below="@+id/splash_iv"
+            android:id="@+id/title_ll">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick-C"
+            android:layout_centerHorizontal="true"
+            android:textColor="#3b3b3b"
+            android:paddingTop="20dp"
+            android:visibility="gone"
+            android:textSize="40sp"
+            android:textStyle="bold"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick-Cargo"
+            android:layout_below="@+id/title_appName_textView"
+            android:layout_centerHorizontal="true"
+            android:textColor="#3b3b3b"
+            android:id="@+id/title_appName_textView"
+            android:paddingTop="5dp"
+            android:textStyle="bold"
+            android:textSize="40sp"/>
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="-"-->
+                    <!--android:layout_below="@+id/title_appName_textView"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:textColor="#3b3b3b"-->
+                    <!--android:id="@+id/title_appName_textView2"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:textSize="40sp"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Cargo"-->
+                    <!--android:layout_below="@+id/title_appName_textView"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:textColor="#3b3b3b"-->
+                    <!--android:id="@+id/title_appName_textView3"-->
+                    <!--android:paddingTop="5dp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:textSize="40sp"/>-->
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        ></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/bottomLinear"
+        android:layout_alignParentBottom="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="visible"
+        android:id="@+id/signup_linear"
+        android:layout_above="@+id/server_error_linear">
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Ver. 1.0"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:elevation="10dp"
+            android:textStyle="bold"
+            android:id="@+id/versionTV"
+            android:background="@color/appThemeBgColorLight"
+            android:textColor="@color/appThemeYellow"
+            android:layout_marginRight="1dp"/>
+
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="LOGIN"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:elevation="10dp"
+            android:onClick="loginOnClick"
+            android:visibility="gone"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="@color/appThemeBgColorLight"
+            android:textColor="@color/appThemeYellow"
+            android:layout_marginLeft="0dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:id="@+id/server_error_linear">
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Server busy\nPlease try again after some time"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:id="@+id/error_textView_splash"
+            android:textSize="18sp"
+            android:elevation="10dp"
+            android:textStyle="normal"
+            android:textColor="@color/appThemeTextColorLight"
+            android:layout_marginRight="1dp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="LOGIN"
+            android:layout_weight="0.8"
+            android:src="@drawable/refresh"
+            android:gravity="center"
+            android:padding="4dp"
+            android:elevation="10dp"
+            android:id="@+id/error_imageView_splash"
+            android:onClick="refreshServerOnClick"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:textColor="@color/appThemeTextColorDark"
+            android:layout_marginLeft="0dp"/>
+    </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

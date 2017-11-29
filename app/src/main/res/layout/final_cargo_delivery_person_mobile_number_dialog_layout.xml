@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/broderline">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+    <com.prts.pickccustomer.constants.PickCCustomTextVIew
+        android:id="@+id/weightTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:padding="15dp"
+        android:gravity="center"
+        android:text="Enter Delivery Receivers Mobile Number"
+        android:textStyle="bold"
+        android:textColor="@color/appThemeYellow"
+        android:visibility="visible" />
+
+    <com.prts.pickccustomer.constants.PickCCustomEditText
+        android:id="@+id/mobileNoEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weightTV"
+        android:background="@color/appThemeBgColorDark"
+        android:drawableLeft="@drawable/mobile_black_icon"
+        android:layout_margin="8dp"
+        android:inputType="phone"
+        android:hint=" Enter 10 digit mobile no."
+        android:padding="10dp"
+        android:digits="1234567890"
+        android:maxLength="10"
+        android:textColor="@color/appThemeTextColorLight"
+        android:visibility="visible" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@color/colorPrimaryDark">
+
+
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/appThemeYellow"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:text="Use registered mobile No."
+        android:paddingBottom="15dp"
+        android:layout_below="@+id/mobileNoEditText"
+        android:textColor="@color/appThemeYellow" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@color/appThemeYellow"/>
+
+    <Button
+        android:id="@+id/okBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="right"
+        android:layout_below="@+id/checkBox"
+        android:gravity="center"
+        android:text="Ok"
+        android:background="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:textColor="@color/appThemeYellow" />
+
+    </LinearLayout>
+
+</LinearLayout>

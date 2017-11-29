@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rate_card_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.1dp"
+            android:background="@drawable/rate_card_bg"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Cancel Booking"
+                android:textColor="@color/appThemeYellow"
+                android:textSize="20sp" />
+
+            <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="Please tell us why you want to cancel"
+                android:textColor="@color/appThemeYellow"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listViewCancelDialog"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginLeft="0.1dp"
+            android:layout_marginRight="0.1dp"
+            android:background="@drawable/rate_card_bg_inner_top"
+            android:paddingTop="10dp">
+
+        </ListView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0.1dp"
+            android:layout_marginLeft="0.1dp"
+            android:layout_marginRight="0.1dp"
+            android:background="@drawable/rate_card_bg_inner_bottom"
+            android:orientation="horizontal">
+
+            <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                android:id="@+id/donotCancelTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="0.1dp"
+                android:layout_weight="1"
+                android:background="@color/appThemeBgColorLight"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Don\'t Cancel"
+                android:textColor="@color/appThemeYellow"
+                android:textSize="24sp"
+                android:textStyle="normal" />
+
+            <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                android:id="@+id/cancelBookingTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="0.1dp"
+                android:layout_weight="1"
+                android:background="@color/appThemeBgColorLight"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Cancel Booking"
+                android:textColor="@color/appThemeYellow"
+                android:textSize="24sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

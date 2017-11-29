@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/appThemeBgColorDark"
+    android:layout_height="match_parent">
+
+
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:id="@+id/cash_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="0.1dp"
+            android:layout_marginLeft="0.1dp"
+            android:layout_marginRight="0.1dp"
+            android:layout_marginTop="0.1dp"
+            android:background="@color/appThemeBgColorLight"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:text="INVOICE"
+            android:textColor="@color/appThemeYellow"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    <com.prts.pickccustomer.constants.PickCCustomTextVIew
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:gravity="center"
+        android:background="@color/appThemeYellow"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:elevation="10dp"
+        android:text="Booking Number"
+        />
+    <com.prts.pickccustomer.constants.PickCCustomTextVIew
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:gravity="center"
+        android:background="@color/appThemeYellow"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:elevation="10dp"
+        android:text="Amount"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:elevation="10dp"
+        android:background="@color/appThemeBgColorDark"
+        >
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColorHint="@color/appThemeTextHintColor">
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:background="@color/appThemeYellow"
+            android:id="@+id/email_txt_et"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+
+            android:ems="10"
+            android:textColor="@color/appThemeTextColorLight"
+            android:textColorHint="@color/appThemeTextHintColor"
+            android:hint="Email id"
+            android:text="android@pickcargo.in"
+            android:maxLength="40"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress" />
+
+
+    </android.support.design.widget.TextInputLayout>
+        <CheckBox
+            android:id="@+id/checkbox_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_margin="5dp"
+            android:text="Un check to change E-mail"
+            android:onClick="onCheckboxClicked"/>
+        </LinearLayout>
+
+</LinearLayout>

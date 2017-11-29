@@ -1,0 +1,91 @@
+<!--I use android:fitsSystemWindows because I am changing the color of the statusbar as well-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_parent_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/appThemeBgColorDark"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/nav_toolbar"></include>
+
+    <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- The main content view -->
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <!-- The navigation drawer -->
+        <LinearLayout
+            android:id="@+id/drawer"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#f3f5f7"
+            android:layout_gravity="start" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:id="@+id/userProfileLL"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:padding="10dp"
+                    android:id="@+id/user_profile_pic_IV"
+                    android:src="@drawable/userprofile_img"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Person name"
+                        android:layout_weight="1"
+                        android:id="@+id/user_name_TV"
+                        android:textColor="@color/colorAppBlue"
+                        android:textStyle="bold"
+                        android:gravity="bottom|left"
+                        android:textSize="18sp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="9988776655"
+                        android:gravity="top|left"
+                        android:id="@+id/user_mobileNo_TV"
+                        android:textColor="@color/colorAppBlue"
+                        android:paddingTop="2dp"
+                        android:layout_weight="1"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:visibility="gone"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:text="" />
+
+            <ListView android:id="@+id/left_drawer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:choiceMode="singleChoice"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="0.1dp"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/broderline" />
+
+        </LinearLayout>
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

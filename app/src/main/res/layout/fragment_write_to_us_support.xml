@@ -1,0 +1,65 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.prts.pickccustomer.support.WriteToUsSupportFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:elevation="10dp"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/appThemeTextHintColor">
+            <com.prts.pickccustomer.constants.PickCCustomEditText
+                android:id="@+id/your_mail_id_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:maxLength="10"
+                android:textColor="@color/appThemeTextColorLight"
+                android:textColorHint="@color/appThemeTextHintColor"
+                android:hint="Your mail id"
+                android:imeOptions="actionNext"
+                android:inputType="phone" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/appThemeTextHintColor"
+            >
+            <com.prts.pickccustomer.constants.PickCCustomEditText
+                android:id="@+id/desc_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textColor="@color/appThemeTextColorLight"
+                android:textColorHint="@color/appThemeTextHintColor"
+                android:hint="Description"
+                android:maxLength="20"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUBMIT"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:background="#0000dd"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:elevation="10dp"
+            android:minWidth="150dp"/>
+    </LinearLayout>
+
+</FrameLayout>

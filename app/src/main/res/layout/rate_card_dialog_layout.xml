@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="32dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="22dp"
+        android:paddingBottom="20dp">
+
+    <LinearLayout
+        android:id="@+id/rate_card_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rate_card_bg"
+        android:orientation="vertical"
+        android:padding="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/rate_card_bg_inner_top_left"
+                android:padding="1dp">
+
+                <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                    android:id="@+id/min_base_fare_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="135"
+                    android:textColor="@color/appThemeTextColorLight"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                    android:id="@+id/min_base_fare_desc_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/min_base_fare_textView"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="135"
+                    android:textColor="@color/appThemeTextColorLight"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="0.45"
+                android:background="@color/appThemeBgColorDark"
+                android:padding="1dp">
+
+                <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                    android:id="@+id/per_km_fare_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="135"
+                    android:textColor="@color/appThemeTextColorLight"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                    android:id="@+id/per_km_fare_desc_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/per_km_fare_textView"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="135"
+                    android:textColor="@color/appThemeTextColorLight"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:background="@drawable/rate_card_bg_inner_top_right"
+                android:padding="1dp">
+
+                <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                    android:id="@+id/ride_time_fare_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="135"
+                    android:textColor="@color/appThemeTextColorLight"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                    android:id="@+id/ride_time_fare_desc_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ride_time_fare_textView"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="135"
+                    android:textColor="@color/appThemeTextColorLight"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/estimate_fare_relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/rate_card_bg_inner_bottom"
+            android:padding="1dp">
+
+            <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                android:id="@+id/estimate_fare_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="Estimate Fare"
+                android:textColor="@color/appThemeTextColorLight"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                android:id="@+id/estimate_fare_desc_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/estimate_fare_textView"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="135"
+                android:textColor="@color/appThemeTextColorLight"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="5dp"
+        android:id="@+id/close_rate_card_imageVIew"
+        android:background="@drawable/rate_card_dialog_close_bg"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/close_icon"/>
+</RelativeLayout>

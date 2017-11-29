@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.prts.pickccustomer.ui.RideEstimateActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/alert_dialog_bg">
+
+        <LinearLayout
+            android:id="@+id/top_LLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:elevation="10dp"
+
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2"
+                            android:gravity="center"
+                            android:text="Trip Estimate"
+                            android:textStyle="bold"
+                            android:textColor="@color/appThemeYellow"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/closeIV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:padding="5dp"
+                            android:visibility="gone"
+                            android:src="@android:drawable/ic_menu_close_clear_cancel" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/delivery_mobile_no_et_bg"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_marginTop="0dp"
+                            android:elevation="5dp"
+
+
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <RelativeLayout
+                                android:id="@+id/from_location_relativeLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/from_location_imageVIew"
+                                    android:layout_width="30dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignBottom="@+id/from_location_horizentalScrollView"
+                                    android:layout_alignTop="@+id/from_location_horizentalScrollView"
+                                    android:padding="10dp"
+                                    android:src="@drawable/source" />
+
+                                <ImageView
+                                    android:id="@+id/edit_from_location_imageVIew"
+                                    android:layout_width="50dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignBottom="@+id/from_location_horizentalScrollView"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignTop="@+id/from_location_horizentalScrollView"
+                                    android:padding="18dp"
+                                    android:src="@drawable/edit"
+                                    android:visibility="gone" />
+
+
+                                <HorizontalScrollView
+                                    android:id="@+id/from_location_horizentalScrollView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/from_location_imageVIew"
+                                    android:fillViewport="true">
+
+                                    <android.support.design.widget.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColorHint="@color/appThemeTextHintColor">
+
+                                        <com.prts.pickccustomer.constants.PickCCustomEditText
+                                            android:id="@+id/from_lcation_textView"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@android:color/transparent"
+                                            android:enabled="false"
+                                            android:focusableInTouchMode="false"
+                                            android:gravity="left|center"
+                                            android:hint="Cargo pick up location"
+                                            android:maxLines="1"
+                                            android:paddingBottom="8dp"
+                                            android:paddingRight="30dp"
+                                            android:paddingTop="8dp"
+                                            android:scrollbars="horizontal"
+                                            android:textColor="@color/appThemeTextColorLight"
+                                            android:textSize="18sp" />
+                                    </android.support.design.widget.TextInputLayout>
+                                </HorizontalScrollView>
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp">
+
+                                <ImageView
+                                    android:id="@+id/to_location_imageVIew"
+                                    android:layout_width="30dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignBottom="@+id/to_location_horizentalScrollView"
+                                    android:layout_alignTop="@+id/to_location_horizentalScrollView"
+                                    android:padding="10dp"
+                                    android:src="@drawable/destination" />
+
+                                <ImageView
+                                    android:id="@+id/edit_to_location_imageVIew"
+                                    android:layout_width="50dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignBottom="@+id/to_location_horizentalScrollView"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignTop="@+id/to_location_horizentalScrollView"
+                                    android:padding="18dp"
+                                    android:src="@drawable/edit"
+                                    android:visibility="gone" />
+
+                                <HorizontalScrollView
+                                    android:id="@+id/to_location_horizentalScrollView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/to_location_imageVIew"
+                                    android:fillViewport="true">
+
+                                    <android.support.design.widget.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColorHint="@color/appThemeTextHintColor">
+
+                                        <com.prts.pickccustomer.constants.PickCCustomEditText
+                                            android:id="@+id/to_lcation_textView"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@android:color/transparent"
+                                            android:enabled="false"
+                                            android:focusableInTouchMode="false"
+                                            android:gravity="left|center"
+                                            android:hint="Cargo drop location"
+                                            android:maxLines="1"
+                                            android:paddingBottom="8dp"
+                                            android:paddingRight="30dp"
+                                            android:paddingTop="8dp"
+                                            android:scrollbars="horizontal"
+                                            android:textColor="@color/appThemeTextColorLight"
+                                            android:textSize="18sp" />
+                                    </android.support.design.widget.TextInputLayout>
+                                </HorizontalScrollView>
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:paddingTop="5dp">
+
+                            <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                                android:id="@+id/minEstimateFareTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.3"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="40sp"
+                                android:textStyle="bold"
+                                />
+
+                            <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:text="-"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="40sp" />
+
+                            <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                                android:id="@+id/maxEstimateFareTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.3"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="40sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+                        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                            android:id="@+id/LoadingStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center"
+                            android:padding="10dp"
+                            android:text=""
+                            android:maxLines="2"
+                            android:textColor="@color/appThemeTextColorLight" />
+
+                        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                            android:id="@+id/estimateTravelTimeTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center"
+                            android:padding="10dp"
+                            android:text=""
+                            android:textColor="@color/appThemeTextColorLight" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:id="@+id/noteTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_LLL"
+            android:background="@drawable/delivery_mobile_no_et_bg"
+            android:gravity="left|center"
+            android:padding="10dp"
+            android:text="* Note: This is an approximate estimate.\nActual cost and travel time may differ."
+            android:textColor="@color/appThemeTextColorLight" />
+    </RelativeLayout>
+</RelativeLayout>

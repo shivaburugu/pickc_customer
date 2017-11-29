@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/appThemeTextColorLight"
+    android:paddingRight="1dp"
+    android:paddingBottom="1dp">
+
+    <ImageView
+        android:id="@+id/iv_Image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:padding="5dp"
+        android:src="@drawable/vehicle_open1_selected" />
+
+    <com.prts.pickccustomer.constants.PickCCustomTextVIew
+        android:id="@+id/text1_TV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_toRightOf="@+id/iv_Image"
+        android:text="Un Loading"
+        android:maxLines="1"
+        android:textSize="10sp"
+        android:layout_centerVertical="true"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:textColor="@color/appThemeYellow" />
+
+  <!--  <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:id="@+id/checkBoxAssistance"
+        android:layout_alignRight="@+id/iv_Image"
+        android:layout_alignParentTop="true"
+        android:buttonTint="@color/appThemeYellow"/>-->
+
+</RelativeLayout>

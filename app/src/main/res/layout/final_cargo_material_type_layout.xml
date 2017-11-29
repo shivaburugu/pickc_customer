@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/broderline">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background_color">
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:id="@+id/typeTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gridView"
+            android:background="@color/appThemeTextColorLight"
+            android:gravity="center"
+            android:padding="12dp"
+            android:layout_weight="0.8"
+            android:text="Select cargo type"
+            android:layout_toLeftOf="@+id/closeIV"
+            android:textColor="@color/appThemeYellow" />
+        <ImageView
+            android:id="@+id/closeIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:layout_below="@+id/gridView"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_alignTop="@+id/typeTV"
+            android:layout_alignBottom="@+id/typeTV"
+            android:background="@color/appThemeTextColorLight"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/close" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/okBtn"
+            android:divider="@color/appThemeBgColorLight"
+            android:dividerHeight="0.1dp"
+            android:padding="10dp"></ListView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:id="@+id/weightTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/appThemeBgColorLight"
+            android:padding="10dp"
+            android:gravity="center"
+            android:text="Enter cargo weight"
+            android:textColor="@color/appThemeYellow"
+            android:visibility="visible" />
+
+        <com.prts.pickccustomer.constants.PickCCustomEditText
+            android:id="@+id/weightEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weightTV"
+            android:background="@color/appThemeBgColorDark"
+            android:hint="Enter your cargo weight in Kgs (Optional)"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            android:layout_margin="10dp"
+            android:imeOptions="actionDone"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:textColor="@color/appThemeTextColorLight"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/okBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/weightRL"
+            android:layout_gravity="right"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:text="NEXT"
+            android:textColor="@color/appThemeYellow"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+  <!--  <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+    </LinearLayout>-->
+
+    </LinearLayout>
+
+</LinearLayout>

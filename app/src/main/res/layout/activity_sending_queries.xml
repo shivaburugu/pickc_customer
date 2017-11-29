@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/login_scroll_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="Contact Us"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="Email : support@pickcargo.in"
+                android:textStyle="bold" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColorHint="@color/appThemeTextHintColor">
+
+                <com.prts.pickccustomer.constants.PickCCustomEditText
+                    android:id="@+id/name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+
+                    android:ems="10"
+                    android:hint="Enter Your Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/appThemeTextColorLight"
+                    android:textColorHint="@color/appThemeTextHintColor" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/appThemeTextHintColor">
+
+                <com.prts.pickccustomer.constants.PickCCustomEditText
+                    android:id="@+id/email_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:ems="10"
+                    android:hint="Enter Your Email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+
+                    android:textColor="@color/appThemeTextColorLight"
+                    android:textColorHint="@color/appThemeTextHintColor" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/appThemeTextHintColor">
+
+                <com.prts.pickccustomer.constants.PickCCustomEditText
+                    android:id="@+id/mobile_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:ems="10"
+                    android:hint="Enter Your Mobile Number"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:textColor="@color/appThemeTextColorLight"
+                    android:textColorHint="@color/appThemeTextHintColor" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/appThemeTextHintColor">
+
+                <com.prts.pickccustomer.constants.PickCCustomEditText
+                    android:id="@+id/subj_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:ems="10"
+                    android:hint="Enter Subject"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="3"
+                    android:textColor="@color/appThemeTextColorLight"
+                    android:textColorHint="@color/appThemeTextHintColor" />
+            </android.support.design.widget.TextInputLayout>
+
+            <EditText
+                android:id="@+id/queryBox"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/textinputborder"
+                android:hint="Please write to us, If any issues / compliants / queries and suggestions"
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                android:paddingLeft="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/appThemeBgColorLight">
+
+            </EditText>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/cashpaymentbutton"
+                android:gravity="center"
+               android:id="@+id/send_queries"
+                android:text="SEND"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/layoutZoom"-->
+
+        <!--android:visibility="gone"-->
+        <!--android:orientation="vertical">-->
+        <!--<ImageView-->
+            <!--android:layout_width="40dp"-->
+            <!--android:id="@+id/closingZoom"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!---->
+            <!--android:layout_above="@+id/close_rate_card_imageVIew"-->
+            <!--android:src="@drawable/close_icon"/>-->
+
+
+
+
+    <!--</LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/rate_card_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rate_card_bg"
+            android:orientation="vertical"
+            android:paddingBottom="1dp"
+            android:paddingRight="0dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                    android:id="@+id/estimate_fare_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rate_card_bg"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Rate Card"
+                    android:textColor="@color/appThemeYellow"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="0.1dp"
+                    android:layout_weight="0.7"
+                    android:background="@drawable/rate_card_bg_inner_plain"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                    <ImageView
+                        android:id="@+id/rateCardImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:padding="15dp"
+                        android:src="@drawable/open_2_ton_selected" />
+                    <ImageView
+
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="bottom"
+                        android:src="@drawable/search_for_big_mage" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:background="@drawable/rate_card_bg_inner_plain"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                        android:id="@+id/truck_desc_rateCardDialog"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="135"
+                        android:textColor="@color/appThemeTextColorLight"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                        android:id="@+id/vehicleMake_desc_rateCardDialog"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ride_time_fare_textView"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Bajaj, Tata-Ace , Mahindra-Jeeto"
+                        android:textColor="@color/appThemeTextColorLight"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ride_time_fare_textView"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="135"
+                        android:textColor="@color/appThemeTextColorLight"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0.1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="0.1dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="0.1dp"
+                    android:layout_weight="0.7"
+                    android:background="@color/appThemeBgColorDark"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Base Fare"
+                        android:textColor="@color/appThemeTextColorLight"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:background="@color/appThemeBgColorDark"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                        android:id="@+id/min_base_fare_textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="135"
+                        android:textColor="@color/appThemeTextColorLight"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="0.1dp"
+                    android:layout_weight="0.7"
+                    android:background="@color/appThemeBgColorDark"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Rate / km"
+                        android:textColor="@color/appThemeTextColorLight"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:background="@color/appThemeBgColorDark"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                        android:id="@+id/per_km_fare_textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="135"
+                        android:textColor="@color/appThemeTextColorLight"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0.1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="0.1dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="0.1dp"
+                    android:layout_weight="0.7"
+                    android:background="@color/appThemeBgColorDark"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Ride time charges"
+                        android:textColor="@color/appThemeTextColorLight"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:background="@color/appThemeBgColorDark"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                        android:id="@+id/ride_time_fare_textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="135"
+                        android:textColor="@color/appThemeTextColorLight"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/rate_card_bg_inner_bottom"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:background="@drawable/rate_card_bg_inner_bottom"
+
+
+                    android:padding="1dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                            android:id="@+id/StarofCaution"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center"
+                            android:padding="5dp"
+                            android:text="*"
+                            android:textColor="@color/appThemeTextColorLight"
+                            android:textSize="18sp"
+                            />
+                        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                            android:id="@+id/textofCaution"
+                            android:layout_alignRight="@+id/StarofCaution"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center"
+                            android:paddingLeft="15dp"
+                            android:paddingBottom="5dp"
+                            android:maxLines="2"
+                            android:text="Toll / Parking / Other charges shall be paid by the customer"
+                            android:textColor="@color/appThemeTextColorLight"
+                            android:textSize="18sp"
+                            />
+                        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                            android:id="@+id/StarofCautionfree"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textofCaution"
+                            android:gravity="left|center"
+                            android:padding="5dp"
+                            android:text="*"
+                            android:textColor="@color/appThemeTextColorLight"
+                            android:textSize="18sp"
+                            />
+                        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                            android:id="@+id/textCautionFree"
+                            android:layout_alignRight="@+id/StarofCautionfree"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textofCaution"
+                            android:gravity="left|center"
+                            android:paddingLeft="15dp"
+                            android:paddingBottom="5dp"
+                            android:maxLines="2"
+                            android:text="Night time charges is applicable from 10PM to 5AM"
+                            android:textColor="@color/appThemeTextColorLight"
+                            android:textSize="18sp"
+                            />
+
+
+                    </RelativeLayout>
+
+                    <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                        android:id="@+id/finalDescRateCardTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:padding="5dp"
+                        android:text="*"
+                        android:textColor="@color/appThemeTextColorLight"
+                        android:textSize="18sp"
+                        />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/close_rate_card_imageVIew"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        android:background="@drawable/rate_card_dialog_close_bg"
+        android:padding="5dp"
+        android:src="@drawable/close_icon" />
+
+</RelativeLayout>

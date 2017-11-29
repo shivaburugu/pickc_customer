@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rate_card_bg"
+    android:orientation="vertical">
+
+    <com.prts.pickccustomer.constants.PickCCustomTextVIew
+        android:id="@+id/weightTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rate_card_bg"
+        android:padding="15dp"
+        android:text="Enter Delivery Receivers Mobile Number"
+        android:textStyle="bold"
+        android:textColor="@color/appThemeYellow"
+        android:visibility="visible" />
+
+    <com.prts.pickccustomer.constants.PickCCustomEditText
+        android:id="@+id/mobileNoEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weightTV"
+        android:background="@drawable/delivery_mobile_no_et_bg"
+        android:layout_margin="1dp"
+        android:inputType="phone"
+        android:hint="Enter 10 digit mobile no."
+        android:padding="20dp"
+        android:digits="1234567890"
+        android:maxLength="10"
+        android:textColor="@color/appThemeTextColorLight"
+        android:visibility="visible" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/appThemeTextColorDark"
+        android:padding="15dp"
+        android:text="Use registered mobile No."
+        android:layout_below="@+id/mobileNoEditText"
+        android:textColor="@color/appThemeTextColorDark" />
+
+    <Button
+        android:id="@+id/okBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="right"
+        android:layout_below="@+id/checkBox"
+        android:gravity="center"
+        android:text="Ok"
+        android:textSize="18sp"
+        android:background="@drawable/rate_card_bg"
+        android:textColor="@color/appThemeYellow" />
+</RelativeLayout>

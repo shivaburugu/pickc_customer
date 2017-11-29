@@ -1,0 +1,1310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_invoice"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.prts.pickccustomer.ui.InvoiceActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin">
+
+                    <!-- todo driver info-->
+                    <RelativeLayout
+                        android:id="@+id/driverRL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp">
+
+                        <ImageView
+                            android:id="@+id/driverProfileIV"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentLeft="true"
+                            android:src="@drawable/pick_c_100x100" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                            android:layout_toRightOf="@+id/driverProfileIV"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/driverNameTV"
+                                android:gravity="center_horizontal"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginLeft="50dp"
+                                android:text="TRIP INVOICE"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="16sp"
+
+                                android:textStyle="bold"
+                                android:layout_alignParentBottom="true" />
+                            <TextView
+                                android:id="@+id/dteOfInvoice"
+                                android:gravity="right"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="Date"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_below="@+id/driverRL"
+                        android:layout_marginTop="0dp"
+                        android:background="@color/appThemeTextHintColor" />
+                    <!-- todo truck info-->
+                    <RelativeLayout
+                        android:id="@+id/truckRL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp">
+
+                        <!--<ImageView-->
+                            <!--android:id="@+id/truckIV"-->
+                            <!--android:layout_width="40dp"-->
+                            <!--android:layout_height="40dp"-->
+                            <!--android:layout_alignParentLeft="true"-->
+                            <!--android:src="@drawable/open_selected_1_ton" />-->
+
+                        <!--<RelativeLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_alignParentRight="true"-->
+                            <!--android:layout_centerVertical="true"-->
+                            <!--android:layout_marginLeft="10dp"-->
+                            <!--android:layout_toRightOf="@+id/truckIV"-->
+                            <!--android:orientation="horizontal">-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/truckDescriptionTV"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_alignParentLeft="true"-->
+                                <!--android:text="Bajaj 1 Ton Open truck"-->
+                                <!--android:textColor="@color/appThemeTextColorLight"-->
+                                <!--android:textSize="16sp"-->
+                                <!--android:textStyle="bold" />-->
+                        <!--</RelativeLayout>-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/customerNamell">
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                            </RelativeLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Customer Name :"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="14sp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/customerName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="Customer Name"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/crnNumberLL"
+                            android:layout_below="@+id/customerNamell">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CRN No.:"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="14sp"
+                                android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/crnNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/customerNamell"
+                            android:text="CRN No.:"
+                            android:textSize="14sp"
+                             />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/crnNumberLL"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/TotalbillText">
+                        <TextView
+
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                           android:gravity="center"
+                            android:layout_below="@+id/crnNumber"
+                            android:text="TOTAL BILL AMOUNT - "
+                            android:textColor="@color/appThemeTextColorLight"
+                            android:textSize="12sp"
+                             />
+                            <TextView
+                                android:id="@+id/totalBilledAmountTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₹ 816.00"
+                                android:textSize="20sp"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TotalbillText"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp">
+                            <TextView
+                                android:id="@+id/TotalbillBreakUp"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:gravity="center"
+                                android:layout_below="@+id/TotalbillText"
+                                android:text="TOTAL BILL BREAKUP"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+
+
+
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/speedRL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/baseFareFor4Km"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="5sp"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:id="@+id/baseFareInKms"
+                                android:text="Base Fare for 4 Km"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/baseFareFor4KmTV"
+
+                                android:layout_width="103dp"
+                                android:layout_height="wrap_content"
+
+                                android:layout_gravity="right"
+                                android:layout_weight="0.79"
+                                android:gravity="right"
+                                android:text="₹ 300.00"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+                                 />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/distanceFareforTenKms"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/baseFareFor4Km"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="5sp"
+                           >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:id="@+id/distanceForKms"
+                                android:text="Distance Fare for 10.5 Km"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/distanceFareforTenKmsTV"
+                                android:layout_width="90dp"
+
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_weight="0.68"
+                                android:gravity="right"
+                                android:paddingLeft="15dp"
+                                android:text="₹ 220.00"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/travelTimeFareForMin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/distanceFareforTenKms"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="5sp"
+                            >
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+
+                                android:text="Travel Time Fare for  50 Min"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/travelTimeFareForMinTV"
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:gravity="right"
+
+                                android:text="₹ 220.00"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+                                 />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:layout_below="@+id/travelTimeFareForMin"
+                            android:layout_marginTop="1dp"
+                            android:background="@color/appThemeTextHintColor" />
+
+                        <LinearLayout
+                            android:id="@+id/totalFare"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view1"
+                            android:background="@color/appThemeTextHintColor"
+                            android:orientation="horizontal"
+
+                            >
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="Total Fare"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/totalFareTV"
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+
+                                android:gravity="right"
+                                android:paddingRight="5dp"
+
+                                android:text="₹ 570.00"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/v2"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:layout_below="@+id/totalFare"
+                            android:layout_marginTop="1dp"
+                            android:background="@color/appThemeTextHintColor" />
+
+                        <LinearLayout
+                            android:id="@+id/loadingAndUnloadingCharges"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/v2"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="5dp"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="Loading and Unloading Charges"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/loadingAndUnloadingChargesTV"
+
+                                android:layout_width="96dp"
+                                android:layout_height="wrap_content"
+
+                                android:layout_gravity="right"
+                                android:gravity="right"
+                                android:text="₹ 300.00"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+
+                                android:layout_weight="0.49" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/waitingNightTimeCharges"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/loadingAndUnloadingCharges"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="Waiting / Night time Charges"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/waitingNightTimeChargesTV"
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:gravity="right"
+                                android:paddingLeft="15dp"
+                                android:text="₹ 220.00"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+                                 />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/otherCharges"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/waitingNightTimeCharges"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="5dp">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="Other / Discount"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/otherChargesTV"
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+
+                                android:gravity="right"
+                                android:paddingLeft="15dp"
+                                android:text="₹ 220.00"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+                                 />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view3"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:layout_below="@+id/otherCharges"
+                            android:layout_marginTop="1dp"
+                            android:background="@color/appThemeTextHintColor" />
+
+                        <LinearLayout
+                            android:id="@+id/otherChargesTotal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view3"
+                            android:background="@color/appThemeTextHintColor"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="Other Charges Total"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/otherChargesTotalTV"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_weight="0.86"
+                                android:gravity="right"
+
+                                android:text="₹ 570.00"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/v4"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:layout_below="@+id/otherChargesTotal"
+                            android:layout_marginTop="1dp"
+                            android:background="@color/appThemeTextHintColor" />
+
+                        <LinearLayout
+                            android:id="@+id/serviceTax"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/v4"
+                            android:orientation="horizontal"
+                           android:layout_marginRight="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="Service Tax  -  5.6 %"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/serviceTaxTV"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_gravity="right"
+                                android:gravity="right"
+                                android:text="₹ 300.00"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+                                 />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/swachBharath"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/serviceTax"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="5dp"
+                           >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="Swachh Bharat Tax - 0.2%"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/swachBharathTV"
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+
+                                android:gravity="right"
+
+                                android:text="₹ 220.00"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+                                 />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/krishiKalyanCess"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/swachBharath"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="5dp"
+                            >
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="Krishi Kalyan Cess  - 0.2%"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/krishiKalyanCessTV"
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+
+                                android:gravity="right"
+
+                                android:text="₹ 220.00"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+                                />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view5"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:layout_below="@+id/krishiKalyanCess"
+                            android:layout_marginTop="1dp"
+                            android:background="@color/appThemeTextHintColor" />
+
+                        <LinearLayout
+                            android:id="@+id/totalBillAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view5"
+                            android:background="@color/appThemeTextHintColor"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="Total Bill Amount (rounded off)"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/totalBillAmountTV"
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:gravity="right"
+                                android:layout_marginRight="5dp"
+                                android:text="₹ 570.00"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/v6"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:layout_below="@+id/totalBillAmount"
+                            android:layout_marginTop="1dp"
+                            android:background="@color/appThemeTextHintColor" />
+
+
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/v6"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+
+                            android:orientation="horizontal">
+                            <Button
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/contactUsBut"
+
+                                android:background="@drawable/mybutton"
+                                android:text="Contact Us"
+                                android:padding="5dp"
+                                android:elevation="5dp"
+                                android:onClick="contactUs"
+                                android:layout_alignParentTop="true"
+
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true" />
+                            <Button
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/emailInvoiceBut"
+
+                                android:background="@drawable/mybutton"
+                                android:text="Email invoice"
+                                android:padding="5dp"
+                                android:elevation="5dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true" />
+
+                            <LinearLayout
+                                android:id="@+id/rateDriverLL"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/contactUsBut"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="10dp"
+                                android:weightSum="1">
+                                <Button
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/rateDriverBut"
+                                    android:elevation="5dp"
+                                    android:background="@drawable/mybutton"
+                                    android:text="Rate the Driver"
+                                    android:padding="5dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentEnd="true" />
+
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rateDriverLL"
+                                android:layout_marginTop="10dp"
+                                android:id="@+id/tripDetailsTV"
+                                android:gravity="center">
+
+
+                            <TextView
+                                android:id="@+id/tripDetails"
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="wrap_content"
+
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Trip Details"
+                                android:textColor="@color/appThemeTextColorLight"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:id="@+id/totalTripKilometers"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tripDetailsTV"
+                                android:orientation="horizontal"
+                                android:layout_marginRight="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left"
+                                    android:text="Total Trip Kilometers"
+                                    android:textColor="@color/appThemeTextColorLight"
+                                    android:textSize="12sp"
+
+                                    />
+
+                                <TextView
+                                    android:id="@+id/totalTripKilometersTV"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_gravity="right"
+
+                                    android:gravity="right"
+                                    android:text="14.5 km"
+                                    android:textColor="@color/appThemeTextColorLight"
+                                    android:textSize="12sp"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/totalTripTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/totalTripKilometers"
+                                android:orientation="horizontal"
+                                android:layout_marginRight="5dp"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left"
+                                    android:text="Total Trip Time"
+                                    android:textColor="@color/appThemeTextColorLight"
+                                    android:textSize="12sp"
+
+                                    />
+
+                                <TextView
+                                    android:id="@+id/totalTripTimeTV"
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+
+                                    android:gravity="right"
+                                    android:paddingLeft="15dp"
+                                    android:text="50 Min"
+                                    android:textColor="@color/appThemeTextColorLight"
+                                    android:textSize="12sp"
+                                    />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/vehicleType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/totalTripTime"
+                                android:orientation="horizontal"
+                                android:layout_marginRight="5dp"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left"
+                                    android:text="Vehicle Type"
+                                    android:textColor="@color/appThemeTextColorLight"
+                                    android:textSize="12sp"
+
+                                    />
+
+                                <TextView
+                                    android:id="@+id/vehicleTypeTV"
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+
+                                    android:gravity="right"
+                                    android:paddingLeft="15dp"
+                                    android:text="Vehicle Types"
+                                    android:textColor="@color/appThemeTextColorLight"
+                                    android:textSize="12sp"
+                                    />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/vehicleCategory"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/vehicleType"
+                                android:orientation="horizontal"
+                                android:layout_marginRight="5dp"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left"
+                                    android:text="Vehicle Category"
+                                    android:textColor="@color/appThemeTextColorLight"
+                                    android:textSize="12sp"
+
+                                    />
+
+                                <TextView
+                                    android:id="@+id/vehicleCategoryTV"
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+
+                                    android:gravity="right"
+                                    android:paddingLeft="15dp"
+                                    android:text="Vehicle Category"
+                                    android:textColor="@color/appThemeTextColorLight"
+                                    android:textSize="12sp"
+                                    />
+                            </LinearLayout>
+
+                            <!--<LinearLayout-->
+                                <!--android:id="@+id/vehicleType"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_below="@+id/totalTripTime"-->
+                                <!--android:orientation="vertical"-->
+                                <!--android:weightSum="1">-->
+
+                                <!--<TextView-->
+
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:gravity="left"-->
+                                    <!--android:text="Vehicle Type"-->
+                                    <!--android:textColor="@color/appThemeTextColorLight"-->
+                                    <!--android:textSize="12sp" />-->
+
+                                <!--<TextView-->
+                                    <!--android:id="@+id/vehicleTypeTV"-->
+                                    <!--android:layout_width="match_parent"-->
+
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_gravity="right"-->
+                                    <!--android:gravity="left"-->
+                                    <!--android:padding="5dp"-->
+
+                                    <!--android:text="Vehicle Types "-->
+                                    <!--android:textColor="@color/appThemeTextColorLight"-->
+                                    <!--android:textSize="12sp"-->
+                                    <!--android:textStyle="bold" />-->
+                            <!--</LinearLayout>-->
+
+
+                            <!--<TextView-->
+                            <!--android:id="@+id/durationTV"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_alignParentBottom="true"-->
+                            <!--android:layout_centerHorizontal="true"-->
+                            <!--android:layout_marginTop="5dp"-->
+                            <!--android:paddingLeft="35dp"-->
+                            <!--android:text="58.91 min"-->
+                            <!--android:textColor="@color/appThemeTextColorLight"-->
+                            <!--android:textSize="16sp"-->
+                            <!--android:textStyle="bold" />-->
+
+                            <!--<TextView-->
+                            <!--android:id="@+id/totalFareTV"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_alignParentBottom="true"-->
+                            <!--android:layout_alignParentRight="true"-->
+                            <!--android:text="Rs. 192.0"-->
+                            <!--android:textColor="@color/appThemeTextColorLight"-->
+                            <!--android:textSize="16sp"-->
+                            <!--android:textStyle="bold" />-->
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_below="@+id/truckRL"
+                        android:layout_marginTop="0dp"
+                        android:background="@color/appThemeTextHintColor" />
+                    <!-- todo speed info-->
+
+
+                    <!-- todo invoice details-->
+
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_below="@+id/relativeLayout"
+                        android:layout_marginTop="0dp"
+
+                        android:background="@drawable/dotted_line_bg" />
+
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_below="@+id/speedRL"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/dotted_line_bg" />
+
+                    <!--<RelativeLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:background="@color/appThemeBgColorLight"-->
+                        <!--android:orientation="horizontal"-->
+                        <!--android:padding="5dp">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_alignParentLeft="true"-->
+                            <!--android:text="Total bill"-->
+                            <!--android:textColor="@color/appThemeYellow"-->
+                            <!--android:textSize="14sp"-->
+                            <!--android:textStyle="bold" />-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/totalBillTV"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_alignParentRight="true"-->
+                            <!--android:text="₹ 51.2"-->
+                            <!--android:textColor="@color/appThemeYellow"-->
+                            <!--android:textSize="14sp"-->
+                            <!--android:textStyle="bold" />-->
+                    <!--</RelativeLayout>-->
+
+                    <!-- todo Trip info-->
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Trip info"
+                        android:textColor="@color/appThemeTextColorLight"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="horizontal"
+                        android:layout_marginRight="5dp"
+
+                        android:weightSum="1">
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Driver : "
+                        android:textColor="@color/appThemeTextColorLight"
+                        android:textSize="12sp"
+                        />
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/driverIdWithName"
+
+                            android:text="Driver Name"
+
+                            android:textColor="@color/appThemeTextColorLight"
+                            android:textSize="12sp" />
+                        </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="horizontal"
+                        android:layout_marginRight="5dp"
+
+                        >
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text="Driver ID : "
+                            android:textColor="@color/appThemeTextColorLight"
+                            android:textSize="12sp"
+                            />
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/driverIdWithoutName"
+
+                            android:text="Driver ID"
+
+                            android:textColor="@color/appThemeTextColorLight"
+                            android:textSize="12sp"
+                            />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/sourceTimeTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/sourceFlagIV"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignTop="@+id/sourceFlagIV"
+                            android:gravity="top|center"
+                            android:text="08:05 AM"
+                            android:textColor="@color/appThemeTextColorLight"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/sourceFlagIV"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignBottom="@+id/sourceAddressTV"
+                            android:layout_alignTop="@+id/sourceAddressTV"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toRightOf="@+id/sourceTimeTV"
+                            android:minHeight="30dp"
+                            android:src="@drawable/source" />
+
+                        <TextView
+                            android:id="@+id/sourceAddressTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+
+                            android:layout_marginTop="10dp"
+                            android:layout_toRightOf="@+id/sourceFlagIV"
+                            android:minHeight="30dp"
+                            android:text="Sai Nilayam, Street Number 1, Veera Reddy Colony, Karthikeya, Tarnaka, Secunderabad, Telangana 500076"
+                            android:textColor="@color/appThemeTextColorLight"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/destinationTimeTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/destinationFlagIV"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignTop="@+id/destinationFlagIV"
+                            android:gravity="top|center"
+                            android:text="08:05 AM"
+                            android:textColor="@color/appThemeTextColorLight"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/destinationFlagIV"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignBottom="@+id/destinationAddressTV"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toRightOf="@+id/destinationTimeTV"
+                            android:minHeight="30dp"
+                            android:src="@drawable/destination" />
+
+                        <TextView
+                            android:id="@+id/destinationAddressTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/sourceAddressTV"
+                            android:layout_marginTop="20dp"
+                            android:layout_toRightOf="@+id/destinationFlagIV"
+                            android:minHeight="30dp"
+                            android:text="Kukatpally Housing Board Colony, Kukatpally, Hyderabad, Telangana"
+                            android:textColor="@color/appThemeTextColorLight"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/flagsView"
+                            android:layout_width="15dp"
+                            android:layout_height="10dp"
+                            android:layout_alignBottom="@+id/destinationFlagIV"
+                            android:layout_alignLeft="@+id/sourceFlagIV"
+                            android:layout_alignTop="@+id/sourceFlagIV"
+                            android:src="@drawable/dotted_line_vertical_bg" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.MapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"></fragment>
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Payment"-->
+
+                    <!--android:textColor="@color/appThemeTextColorLight"-->
+                    <!--android:gravity="center"-->
+                    <!--android:textSize="14sp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_weight="0.07" />-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Paid By :"-->
+                        <!--android:textColor="@color/appThemeTextColorLight"-->
+                        <!--android:gravity="left"-->
+                        <!--android:paddingLeft="20dp"-->
+                        <!--android:textSize="12sp"-->
+
+                       <!--/>-->
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/thankyou"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="  for using PICK-C services, See you soon"
+                        android:textColor="@color/appThemeTextColorLight"
+                        android:gravity="center"
+                        android:textSize="12sp"/>
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="right"
+                        android:src="@drawable/thanks"/>
+                  </LinearLayout>
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text=" Office: Plot No. 12 A, Survery No. 71/1, Jai Hind Gandhi Rd, VIP Hills, Sillicon Valley,Madhapur, Hyderabad-500081."-->
+                    <!--android:textColor="@color/appThemeTextColorLight"-->
+                    <!--android:gravity="center"-->
+                    <!--android:maxLines="3"-->
+                    <!--android:textSize="14sp"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" www.pickcargo.in"
+                    android:textColor="@color/appThemeTextColorLight"
+                    android:gravity="center_horizontal"
+                    android:maxLines="3"
+                    android:textSize="14sp"
+                    android:layout_weight="0.09" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="All Rights Reserved  PR TECHNO SOLUTIONS Pvt. Ltd."
+                    android:textColor="@color/appThemeTextColorLight"
+                    android:gravity="center_horizontal"
+                    android:maxLines="3"
+                    android:textSize="12sp"
+                    android:layout_weight="0.09" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="CIN: U74999TG2016PTC111331"
+                        android:paddingLeft="20dp"
+                        android:layout_gravity="left"
+                        android:textColor="@color/appThemeTextColorLight"
+                        android:textSize="10sp"/>
+                    <TextView
+                        android:paddingLeft="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="PAN No: AAICP7355E"
+                        android:textColor="@color/appThemeTextColorLight"
+                        android:gravity="right"
+                        android:layout_marginRight="10dp"
+                        android:textSize="10sp"/>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+</RelativeLayout>

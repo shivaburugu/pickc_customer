@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+   <!-- <com.prts.pickccustomer.AVLoadingIndicatorView
+        android:id="@+id/indicator"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:indicatorName="BallPulseIndicator" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+            <FrameLayout
+                android:id="@+id/driverDetailsFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="0dp" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/booknow_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/appThemeBgColorDark"
+        android:orientation="horizontal"
+        android:padding="0dp"
+        android:visibility="visible">
+
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:id="@+id/book_confirm_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:background="@color/appThemeBgColorLight"
+            android:gravity="center"
+            android:minHeight="50dp"
+            android:padding="10dp"
+            android:text="Confirm Booking"
+            android:textColor="@color/appThemeYellow"
+            android:textSize="15sp"
+            android:textStyle="normal" />
+
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:id="@+id/book_cancel_textView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginRight="0dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:background="@color/appThemeBgColorLight"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textColor="@color/appThemeYellow"
+            android:textSize="15sp"
+            android:textStyle="normal" />
+
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:id="@+id/book_later_textView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginRight="0.1dp"
+            android:layout_weight="1"
+            android:background="@color/appThemeBgColorLight"
+            android:gravity="center"
+            android:text="BOOK LATER"
+            android:textColor="@color/appThemeYellow"
+            android:textSize="15sp"
+            android:textStyle="normal" />
+
+
+
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:id="@+id/book_now_textView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="0dp"
+            android:layout_weight="1"
+            android:background="@color/appThemeBgColorLight"
+            android:gravity="center"
+            android:text="BOOK NOW"
+            android:textColor="@color/appThemeYellow"
+            android:textSize="15sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+
+</LinearLayout>

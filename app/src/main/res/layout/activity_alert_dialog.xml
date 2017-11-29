@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_alert_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/alert_dialog_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="TextView"
+            android:textColor="@color/appThemeYellow"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/activity_alert_dialog_close_bg"
+            android:layout_below="@+id/titleTV">
+
+            <TextView
+                android:id="@+id/messageTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:padding="8dp"
+                android:text="TextView" />
+
+            <Button
+                android:id="@+id/okButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/messageTV"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/alert_dialog_bg"
+                android:text="OK"
+                android:textColor="@color/appThemeYellow"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/cancelButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/messageTV"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/alert_dialog_bg"
+                android:text="Cancel"
+                android:textColor="@color/appThemeYellow"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.prts.pickccustomer.ui.ProfileActivity">
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:alpha="1"
+        android:visibility="gone"
+        android:background="@color/colorPrimary"
+        android:src="@drawable/pick_c"/>
+
+    <ImageView
+        android:id="@+id/background_image_clouds"
+        android:layout_width="fill_parent"
+        android:layout_height="154.0dip"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="160.0dip"
+        android:adjustViewBounds="true"
+        android:alpha="0.2"
+        android:scaleType="matrix" />
+
+
+
+    <com.prts.pickccustomer.constants.PickCCustomTextVIew
+        android:id="@+id/error_text_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorCancelledStatus"
+        android:padding="10dp"
+        android:text="Error"
+        android:layout_below="@+id/background_image"
+
+        android:textColor="#fff"
+        android:gravity="center"
+        android:visibility="gone" />
+
+
+    <ScrollView
+        android:id="@+id/sign_up_scroll_view"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="23dp"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+
+        android:layout_below="@+id/background_image"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:background="@color/appThemeBgColorDark"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/sign_up_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                    android:id="@+id/errorText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/mobileNoIV"
+                        android:padding="8dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/mobile"
+                        android:layout_alignTop="@+id/mobileNoTIL"
+                        android:layout_alignBottom="@+id/mobileNoTIL"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Mobile number"
+                        android:paddingLeft="10dp"
+                        android:layout_alignLeft="@+id/mobileNoTIL"
+                        android:textColorHint="@color/appThemeTextHintColor"/>
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:id="@+id/mobileNoTIL"
+                        android:layout_toRightOf="@+id/mobileNoIV"
+                        android:textColorHint="@color/appThemeTextHintColor">
+                        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                            android:background="@android:color/transparent"
+                            android:id="@+id/mobile_number_txt_et"
+                            android:hint="Mobile number"
+                            android:enabled="false"
+                            style="@android:style/Widget.EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:gravity="left|center"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/appThemeTextColorLight"
+                            android:textColorHint="@color/appThemeTextHintColor"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:visibility="gone"
+                        android:src="@android:drawable/ic_menu_edit"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@android:color/darker_gray"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:id="@+id/nameTIL"
+                        android:layout_toRightOf="@+id/nameIV"
+                        android:layout_toLeftOf="@+id/nameET_IV"
+                        android:textColorHint="@color/appThemeTextHintColor"
+                        android:layout_alignParentTop="true">
+                        <com.prts.pickccustomer.constants.PickCCustomEditText
+                            android:background="@android:color/transparent"
+                            android:id="@+id/name_txt_et"
+                            android:ems="10"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:gravity="left|center"
+                            android:paddingLeft="10dp"
+                            android:hint="Name"
+                            android:textColor="@color/appThemeTextColorLight"
+                            android:textColorHint="@color/appThemeTextHintColor"
+                            android:singleLine="true"
+                            android:digits="QWERTYUIOPASDFGHJKLZXCVBNM qwertzuiopasdfghjklyxcvbnm"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
+                            android:maxLength="50" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/nameIV"
+                        android:padding="8dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_nav_profile"
+                        android:layout_alignTop="@+id/nameTIL"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignBottom="@+id/nameTIL"
+                        android:background="#00001122"
+                        android:onClick="dummyOnClickLL"
+                        android:id="@+id/dummyView_name"
+                        android:layout_toLeftOf="@+id/nameET_IV"></View>
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:padding="8dp"
+                        android:id="@+id/nameET_IV"
+                        android:onClick="onCLickEtIv"
+                        android:src="@android:drawable/ic_menu_edit"/>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@android:color/darker_gray"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:id="@+id/emailTIL"
+                    android:layout_toRightOf="@+id/emailIV"
+                        android:layout_toLeftOf="@+id/email_et_iv"
+                    android:textColorHint="@color/appThemeTextHintColor">
+                    <com.prts.pickccustomer.constants.PickCCustomEditText
+                        android:background="@android:color/transparent"
+                        android:id="@+id/email_txt_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="left|center"
+                        android:paddingLeft="10dp"
+                        android:ems="10"
+                        android:textColor="@color/appThemeTextColorLight"
+                        android:textColorHint="@color/appThemeTextHintColor"
+                        android:hint="Email id (Optional)"
+                        android:maxLength="40"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress" />
+                </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/emailIV"
+                        android:padding="6dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/email"
+                        android:layout_alignTop="@+id/emailTIL"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignBottom="@+id/emailTIL"
+                        android:background="#00001122"
+                        android:onClick="dummyOnClickLL"
+                        android:id="@+id/dummyView_email"
+                        android:layout_toLeftOf="@+id/email_et_iv"></View>
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:padding="8dp"
+                        android:id="@+id/email_et_iv"
+                        android:onClick="onCLickEtIv"
+                        android:src="@android:drawable/ic_menu_edit"/>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@android:color/darker_gray"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:layout_margin="10dp"
+                    android:id="@+id/passwordTIL"
+                    android:layout_toRightOf="@+id/passwordIV"
+                        android:layout_toLeftOf="@+id/password_et_iv"
+                    android:textColorHint="@color/appThemeTextHintColor">
+
+                    <com.prts.pickccustomer.constants.PickCCustomTextVIew
+                        android:id="@+id/password_txt_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="left|center"
+                        android:paddingLeft="10dp"
+                        android:background="@android:color/transparent"
+                        style="@android:style/Widget.EditText"
+                        android:textColor="@color/appThemeTextColorLight"
+                        android:textColorHint="@color/appThemeTextHintColor"
+                        android:ems="10"
+                        android:text="12345678"
+                        android:maxLength="20"
+                        android:hint="Password"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword" />
+                </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/passwordIV"
+                        android:padding="14dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/password"
+                        android:layout_alignBottom="@+id/password_et_iv"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignBottom="@+id/passwordTIL"
+                        android:background="#00001122"
+                        android:onClick="dummyOnClickLL"
+                        android:id="@+id/dummyView_password"
+                        android:layout_toLeftOf="@+id/password_et_iv"></View>
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:padding="8dp"
+                        android:onClick="onCLickEtIv"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:id="@+id/password_et_iv" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@android:color/darker_gray"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="visible"
+        android:elevation="10dp"
+        android:id="@+id/signup_linear"
+        android:layout_alignParentBottom="true">
+        <com.prts.pickccustomer.constants.PickCCustomTextVIew
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Update profile"
+            android:layout_weight="1"
+            android:id="@+id/updateProfileTV"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:textColor="@color/appThemeYellow"
+            android:background="@color/appThemeBgColorLight"
+            android:layout_marginRight="0dp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
