@@ -1267,8 +1267,15 @@ public class BookingFragment extends Fragment implements Constants, BlinkBooking
 
     private Marker truckMarker;
     LatLngInterpolator latLngInterpolator = null;
-
+    private Location previousLocation = null;
+    private float bearing = 0;
     private void onTruckLocationUpdated(Location location) {
+
+        if(previousLocation == null){
+            previousLocation = location;
+        } else {
+            bearing = previousLocation.bearingTo(location);
+        }
 
         if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
@@ -1326,6 +1333,7 @@ public class BookingFragment extends Fragment implements Constants, BlinkBooking
                 try{
                     if(marker != null){
                         marker.setPosition(latLngInterpolator.interpolate(v, startPosition, finalPosition));
+                        marker.setRotation(bearing);
                     }
                 }catch(Exception e){
                     Log.e(TAG,"Exception while changing the marker position with animation : "+e.toString());
