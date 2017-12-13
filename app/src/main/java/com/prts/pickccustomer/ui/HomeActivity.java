@@ -1019,6 +1019,8 @@ public class HomeActivity extends NavDrawerMainActivity implements
         }
         pinIV.setImageResource(R.drawable.source2);
         map.clear();
+        map.getUiSettings().setZoomGesturesEnabled(false);
+
         mp = new MarkerOptions();
 
         mp.position(location);
@@ -1239,8 +1241,12 @@ public class HomeActivity extends NavDrawerMainActivity implements
         currentSelection = FROM;
         toLatLng = null;
         toLocationTV.setText("");
+        googleMap.getUiSettings().setZoomControlsEnabled(false);
         map = googleMap;
+        map.getUiSettings().setZoomGesturesEnabled(false);
+
         map.clear();
+        map.getUiSettings().setZoomGesturesEnabled(false);
         if (truckCateogeoriesFragment != null) {
             getNearByTrucksBasedOnSelection(truckCateogeoriesFragment.selectedvehicleTypeID, truckCateogeoriesFragment.selectedTruckID);
         }
@@ -1292,14 +1298,14 @@ public class HomeActivity extends NavDrawerMainActivity implements
                     locationLLL.setVisibility(View.VISIBLE);
                 }
                 viewsLinearFragentsLL.setVisibility(View.VISIBLE);
-                Log.d(TAG, "onCameraIdle: 123897");
+                //Log.d(TAG, "onCameraIdle: 123897");
                 if (!fromLocationTV.getText().toString().equals(GETTING_LOACATION_STATIC_TEXT) &&
                         !toLocationTV.getText().toString().equals(GETTING_LOACATION_STATIC_TEXT)) {
-                    Log.d(TAG, "onCameraIdle: no getting location");
+                    //Log.d(TAG, "onCameraIdle: no getting location");
                     return;
                 }
-                Log.d(TAG, "onCameraIdle: getting location");
-                Log.i("centerLat", map.getCameraPosition().target.latitude + "");
+                //Log.d(TAG, "onCameraIdle: getting location");
+                //Log.i("centerLat", map.getCameraPosition().target.latitude + "");
 
                 Log.i("centerLong", map.getCameraPosition().target.longitude + "");
 
@@ -1516,6 +1522,8 @@ public class HomeActivity extends NavDrawerMainActivity implements
         final RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) mapLL.getLayoutParams();
         params.addRule(RelativeLayout.BELOW, R.id.location_LLL);
         map.clear();
+        map.getUiSettings().setZoomGesturesEnabled(false);
+
         Log.d(TAG, fromLocation + " showBothFromTOLocationOnMapThroughMarkers: " + toLocation);
         ArrayList<Marker> markersAL = new ArrayList<>();
         if (fromLocation != null) {
@@ -2025,6 +2033,8 @@ public class HomeActivity extends NavDrawerMainActivity implements
                                 public void run() {
                                     try {
                                         map.clear();
+                                        map.getUiSettings().setZoomGesturesEnabled(false);
+
                                     }catch (Exception ae)
                                     {}
                                     if (truckCateogeoriesFragment != null) {
@@ -2159,6 +2169,8 @@ public class HomeActivity extends NavDrawerMainActivity implements
     private void showNearByTrucksonMap(int selectedVehicleGroup) {
         try {
             map.clear();
+            map.getUiSettings().setZoomGesturesEnabled(false);
+
         }catch (Exception ae)
         {
 

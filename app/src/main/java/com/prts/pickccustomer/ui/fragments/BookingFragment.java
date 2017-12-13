@@ -72,6 +72,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
@@ -135,6 +136,7 @@ import static android.content.Context.MODE_PRIVATE;
 import static com.prts.pickccustomer.R.id.vehicleType;
 import static com.prts.pickccustomer.ui.HomeActivity.ANNOUNCEMENTS_SHARED_PREF;
 import static com.prts.pickccustomer.ui.HomeActivity.ANNOUNCEMENT_SHARED_PREF_KEY;
+import static com.prts.pickccustomer.ui.HomeActivity.TO;
 import static com.prts.pickccustomer.ui.HomeActivity.fromLatLng;
 import static com.prts.pickccustomer.ui.HomeActivity.toLatLng;
 import static com.prts.pickccustomer.ui.InvoiceActivity.BOOKING_NO;
@@ -1052,6 +1054,7 @@ public class BookingFragment extends Fragment implements Constants, BlinkBooking
                             location.setLatitude(currentLat);
                             location.setLongitude(currentLong);
                             onTruckLocationUpdated(location);
+                            Log.i("BugFix", "run: currentLat:: "+currentLat+" currentlong:: "+currentLong);
                             activity.getTravelTimeBetweenTwoLocations(activity.fromLatLng.latitude + "," + activity.fromLatLng.longitude, currentLat + "," + currentLong, 0, false);
 
 
@@ -1263,19 +1266,22 @@ public class BookingFragment extends Fragment implements Constants, BlinkBooking
 //            startLocationUpdates();
 //        }
 //    }
-
-
     private Marker truckMarker;
     LatLngInterpolator latLngInterpolator = null;
     private Location previousLocation = null;
     private float bearing = 0;
+
     private void onTruckLocationUpdated(Location location) {
 
-        if(previousLocation == null){
+        if (previousLocation == null) {
             previousLocation = location;
         } else {
             bearing = previousLocation.bearingTo(location);
+            previousLocation = location;
         }
+
+        Log.i("BugFix", "onTruckLocationUpdated: previousLocation lat:: "+previousLocation.getLatitude()+" previousLocation long:: "+previousLocation.getLongitude());
+        Log.i("BugFix", "onTruckLocationUpdated: location lat:: "+location.getLatitude()+" previousLocation long:: "+location.getLongitude());
 
         if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
@@ -1290,19 +1296,34 @@ public class BookingFragment extends Fragment implements Constants, BlinkBooking
 
         GoogleMap googleMap = ((HomeActivity) activity).map;
 
-        if(latLngInterpolator == null) {
+        if (latLngInterpolator == null) {
             latLngInterpolator = new LatLngInterpolator.LinearFixed();
         }
 
         if (googleMap != null) {
             if (truckMarker == null) {
-                Log.d("Marker", "truckMarker is null inside onLocationChanged ");
+                LatLng latlng = new LatLng(location.getLatitude(),
+                        location.getLongitude());
+                //Log.d("Marker", "truckMarker is null inside onLocationChanged ");
+                Log.i("BugFix", "truckMarker null bearing:: "+bearing);
+
+                CameraPosition cameraPosition = new CameraPosition.Builder()
+                        .target(latlng) // Center Set
+                        .zoom(16.0f)                // Zoom
+                        .bearing(bearing)                // Orientation of the camera to east
+                        .tilt(30)                   // Tilt of the camera to 30 degrees
+                        .build();
+                Log.i("BugFix", "truckMarker null bearing:: "+bearing);
+                Log.i("BugFix", "truckMarker null: location lat:: "+location.getLatitude()+" location long:: "+location.getLongitude());
+
                 truckMarker = googleMap
                         .addMarker(new MarkerOptions()
                                 .position(new LatLng(location.getLatitude(),
                                         location.getLongitude()))
                                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.open_truck_symbol_marker)).flat(true)
                                 .anchor(.5f, .5f));
+                googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+
             } else {
                 Log.d("Marker", "truckMarker is not null inside onLocationChanged ");
                 animateMarkerLocationToGBP(truckMarker, locationTOLatLng(location),
@@ -1316,7 +1337,7 @@ public class BookingFragment extends Fragment implements Constants, BlinkBooking
         final Handler handler = new Handler();
         final long start = SystemClock.uptimeMillis();
         final Interpolator interpolator = new LinearInterpolator();
-        final float durationInMs = 1500;
+        final float durationInMs = 2500;
 
         handler.post(new Runnable() {
             long elapsed;
@@ -1329,20 +1350,23 @@ public class BookingFragment extends Fragment implements Constants, BlinkBooking
                 elapsed = SystemClock.uptimeMillis() - start;
                 t = elapsed / durationInMs;
                 v = interpolator.getInterpolation(t);
+                Log.d("BugFix", "animateMarkerLocationToGBP:: bearing "+bearing);
+                Log.i("BugFix", "onTruckLocationUpdated: startPosition lat:: "+startPosition.latitude+" startPosition long:: "+startPosition.longitude);
+                Log.i("BugFix", "onTruckLocationUpdated: finalPosition lat:: "+finalPosition.latitude+" finalPosition long:: "+finalPosition.longitude);
 
-                try{
-                    if(marker != null){
+                GoogleMap googleMap = ((HomeActivity) activity).map;
                         marker.setPosition(latLngInterpolator.interpolate(v, startPosition, finalPosition));
+                        CameraPosition cameraPosition = new CameraPosition.Builder()
+                                .target(finalPosition) // Center Set
+                                .zoom(16.0f)                // Zoom
+                                .bearing(bearing)                // Orientation of the camera to east
+                                .tilt(30)                   // Tilt of the camera to 30 degrees
+                                .build();
+                        googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
                         marker.setRotation(bearing);
-                    }
-                }catch(Exception e){
-                    Log.e(TAG,"Exception while changing the marker position with animation : "+e.toString());
-                }
-
-                // Repeat till progress is complete.
                 if (t < 1) {
                     // Post again 16ms later.
-                    handler.postDelayed(this, 16);
+                    handler.postDelayed(this, 32);
                 }
             }
         });
@@ -1351,8 +1375,6 @@ public class BookingFragment extends Fragment implements Constants, BlinkBooking
     public static LatLng locationTOLatLng(Location location) {
         return new LatLng(location.getLatitude(), location.getLongitude());
     }
-
-
 
     Marker mk = null;
     public void CreateMarker(double latitude, double longitude)
@@ -3367,7 +3389,7 @@ public class BookingFragment extends Fragment implements Constants, BlinkBooking
         return (result + 360) % 360;
     }
 
-    private interface LatLngInterpolator {
+    public interface LatLngInterpolator {
         LatLng interpolate(float fraction, LatLng a, LatLng b);
 
         class LinearFixed implements com.prts.pickccustomer.ui.fragments.BookingFragment.LatLngInterpolator {
